@@ -1,10 +1,16 @@
 language: python
-python: "2.7.14"
+python: "2.7.15"
 sudo: required
 cache:
   pip: true
   directories:
     - $HOME/buildout-cache
+env:
+  matrix:
+    - PLONE_VERSION=4.3.x BUILDOUT=buildout
+    - PLONE_VERSION=5.0.x BUILDOUT=buildout
+    - PLONE_VERSION=5.1.x BUILDOUT=buildout
+    - PLONE_VERSION=5.2.x BUILDOUT=buildout
 before_install:
   - mkdir -p $HOME/buildout-cache/{eggs,downloads}
   - mkdir $HOME/.buildout
@@ -20,5 +26,6 @@ before_install:
 install:
   - cookiecutter https://github.com/kitconcept/cookiecutter-plone.git --no-input
 script:
-  - (cd projectname && make build)
-  - (cd projectname && make test)
+  - sed -ie "s#plone-x.x.x.cfg#plone-$PLONE_VERSION.cfg#" projectname.core/buildout.cfg
+  - (cd projectname.core && make build)
+  - (cd projectname.core && make test)
