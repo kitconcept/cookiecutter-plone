@@ -18,4 +18,7 @@ bin/python bin/pip:
 clean:
 	git clean -Xdf
 
+test:
+	bin/test
+
 .PHONY: all clean
