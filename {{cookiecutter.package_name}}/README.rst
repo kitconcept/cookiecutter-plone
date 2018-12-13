@@ -11,6 +11,9 @@
    :target: https://kitconcept.com/
 
 
+.. image:: https://secure.travis-ci.org/collective/{{cookiecutter.package_name}}.png
+    :target: http://travis-ci.org/collective/{{cookiecutter.package_name}}
+
 Development
 -----------
 
@@ -34,25 +37,3 @@ Run Unit / Integration Tests::
 Run Robot Framework based acceptance tests::
 
   make test-acceptance
-
-
-Code
-----
-
-Code Repository: https://github.com/kitconcept/{{cookiecutter.project_slug}}
-Continous Integration: https://jenkins.kitconcept.io/job/kitconcept/job/{{cookiecutter.project_slug}}/
-
-
-Project Management
-------------------
-
-Trello: https://trello.com/ ...
-Harvest: ...
-
-
-Server
-------
-
-Live: ...
-Staging: {{cookiecutter.project_slug}}.kitconcept.io (Deploy automatically from master branch)
-
