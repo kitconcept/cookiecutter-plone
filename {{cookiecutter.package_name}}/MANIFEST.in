@@ -1,0 +1,4 @@
+graft src/{{cookiecutter.package_name}}
+graft docs
+include *.rst
+global-exclude *.pyc
