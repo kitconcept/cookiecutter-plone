@@ -24,8 +24,8 @@ before_install:
   - unzip chromedriver_linux64.zip
   - sudo mv chromedriver /usr/local/bin
 install:
-  - cookiecutter https://github.com/kitconcept/cookiecutter-plone.git --no-input
+  - cookiecutter . --no-input
 script:
-  - sed -ie "s#plone-x.x.x.cfg#plone-$PLONE_VERSION.cfg#" projectname.core/buildout.cfg
-  - (cd projectname.core && make build)
-  - (cd projectname.core && make test)
+  - sed -ie "s#plone-x.x.x.cfg#plone-$PLONE_VERSION.cfg#" package.name/buildout.cfg
+  - (cd package.name && make build)
+  - (cd package.name && make test)
