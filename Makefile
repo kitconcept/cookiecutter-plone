@@ -28,15 +28,16 @@ setup: ## Create virtualenv and install dependencies
 .PHONY: generate
 generate: ## Create a sample package
 	@echo "$(GREEN)==> Creating new test package$(RESET)"
-	rm -rf projectname
+	rm -rf projectname.core
 	./bin/cookiecutter . --no-input
 
 .PHONY: test
 test: ## Create a sample package and tests it (runs buildout)
 	@echo "$(GREEN)==> Creating new test package$(RESET)"
-	rm -rf projectname
-	./bin/cookiecutter . --no-input
-	(cd projectname && virtualenv -p python2 --clear .)
-	(cd projectname && bin/pip install pip --upgrade)
-	(cd projectname && bin/pip install -r requirements.txt)
-	(cd projectname && bin/buildout)
+	# rm -rf projectname.core
+	# ./bin/cookiecutter . --no-input
+	(cd projectname.core && virtualenv -p python2 --clear .)
+	(cd projectname.core && bin/pip install pip --upgrade)
+	(cd projectname.core && bin/pip install -r requirements.txt)
+	(cd projectname.core && bin/buildout)
+	(cd projectname.core && bin/test)
