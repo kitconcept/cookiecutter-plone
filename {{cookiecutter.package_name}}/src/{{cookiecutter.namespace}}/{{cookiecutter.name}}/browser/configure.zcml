@@ -18,10 +18,10 @@
       />
 
   <!-- <browser:page
-      for="{{cookiecutter.project_slug}}.interfaces.IHomepage"
+      for="{{cookiecutter.package_name}}.interfaces.IHomepage"
       name="view"
       template="homepage.pt"
-      layer="{{cookiecutter.project_slug}}.interfaces.I{{cookiecutter.project_slug.capitalize()}}CoreLayer"
+      layer="{{cookiecutter.package_name}}.interfaces.I{{cookiecutter.project_slug.capitalize()}}CoreLayer"
       permission="zope2.View"
       /> -->
 

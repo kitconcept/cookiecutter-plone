@@ -1,6 +1,6 @@
 
 # -*- coding: utf-8 -*-
-from {{cookiecutter.project_slug}} import _
+from {{cookiecutter.package_name}} import _
 from plone.autoform.interfaces import IFormFieldProvider
 from plone.supermodel import model
 from zope.interface import provider
