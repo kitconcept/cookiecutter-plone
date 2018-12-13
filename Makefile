@@ -26,7 +26,7 @@ setup: ## Create virtualenv and install dependencies
 	bin/pip install -r requirements.txt --upgrade
 
 .PHONY: generate
-generate: ## Create a sample package
+test-generate: ## Create a sample test package
 	@echo "$(GREEN)==> Creating new test package$(RESET)"
 	rm -rf package.name
 	./bin/cookiecutter . --no-input
@@ -41,3 +41,8 @@ test: ## Create a sample package and tests it (runs buildout)
 	(cd package.name && bin/pip install -r requirements.txt)
 	(cd package.name && bin/buildout)
 	(cd package.name && bin/test)
+
+.PHONY: create
+create: ## Create a package
+	@echo "$(GREEN)==> Creating new package$(RESET)"
+	./bin/cookiecutter .
