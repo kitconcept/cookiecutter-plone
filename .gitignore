@@ -6,4 +6,4 @@ lib/
 pip-selfcheck.json
 *.py?
 
-projectname
+package.name
