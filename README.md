@@ -1,6 +1,10 @@
 Cookiecutter template for the Plone CMS
 =======================================
 
+![kitconcept, GmbH](https://kitconcept.com/logo.svg)
+
+[![Build Status](https://travis-ci.org/kitconcept/cookiecutter-plone.svg?branch=master)](https://travis-ci.org/kitconcept/cookiecutter-plone)
+
 A Cookiecutter template for the Plone CMS
 
 Requirements
