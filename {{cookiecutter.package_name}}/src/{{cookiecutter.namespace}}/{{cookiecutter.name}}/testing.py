@@ -37,7 +37,6 @@ class {{cookiecutter.project_slug.capitalize()}}CoreLayer(PloneSandboxLayer):
         )
         logout()
         applyProfile(portal, '{{cookiecutter.package_name}}:default')
-        api.portal.set_registry_record('plone.default_language', u'en')
 
 
 {{cookiecutter.project_slug.upper()}}_CORE_FIXTURE = {{cookiecutter.project_slug.capitalize()}}CoreLayer()
