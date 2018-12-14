@@ -49,7 +49,7 @@ class TestSetup(unittest.TestCase):
 
 class TestUninstall(unittest.TestCase):
 
-    layer = {{cookiecutter.project_slug.upper()}}FAQ_CORE_INTEGRATION_TESTING
+    layer = {{cookiecutter.project_slug.upper()}}_CORE_INTEGRATION_TESTING
 
     def setUp(self):
         self.portal = self.layer['portal']
