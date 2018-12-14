@@ -6,3 +6,4 @@ from zope.interface import implementer
 
 @implementer(IHomepage)
 class Homepage(Container):
+  """"""
