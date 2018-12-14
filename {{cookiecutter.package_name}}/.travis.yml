@@ -7,10 +7,10 @@ cache:
     - $HOME/buildout-cache
 env:
   matrix:
-    - PLONE_VERSION=4.3.x BUILDOUT=buildout
-    - PLONE_VERSION=5.0.x BUILDOUT=buildout
-    - PLONE_VERSION=5.1.x BUILDOUT=buildout
-    - PLONE_VERSION=5.2.x BUILDOUT=buildout
+    - PLONE_VERSION=4.3.x
+    - PLONE_VERSION=5.0.x
+    - PLONE_VERSION=5.1.x
+    - PLONE_VERSION=5.2.x
 before_install:
   - mkdir -p $HOME/buildout-cache/{eggs,downloads}
   - mkdir $HOME/.buildout
