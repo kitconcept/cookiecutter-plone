@@ -2,6 +2,6 @@
 <layers>
   <layer
       name="{{cookiecutter.package_name}}"
-      interface="{{cookiecutter.package_name}}.interfaces.I{{cookiecutter.project_slug.capitalize()}}CoreLayer"
+      interface="{{cookiecutter.package_name}}.interfaces.IBrowserLayer"
       />
 </layers>

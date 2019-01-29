@@ -4,10 +4,9 @@ from zope.publisher.interfaces.browser import IDefaultBrowserLayer
 from plone.supermodel import model
 
 
-class I{{cookiecutter.project_slug.capitalize()}}CoreLayer(IDefaultBrowserLayer):
+class IBrowserLayer(IDefaultBrowserLayer):
     """Marker interface that defines a browser layer."""
 
 
 class IHomepage(model.Schema):
-    """ Homepage content type interface
-    """
+    """Homepage content type interface."""
