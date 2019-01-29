@@ -8,7 +8,7 @@
   <include package="z3c.jbot" file="meta.zcml" />
   <browser:jbot
       directory="overrides"
-      layer="..interfaces.IBrowserLayer"
+      layer="{{cookiecutter.package_name}}.interfaces.I{{cookiecutter.project_slug.capitalize()}}CoreLayer"
       />
 
   <!-- Publish static files -->
