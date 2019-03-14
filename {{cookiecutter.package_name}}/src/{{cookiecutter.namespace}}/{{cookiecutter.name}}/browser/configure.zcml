@@ -13,7 +13,7 @@
 
   <!-- Publish static files -->
   <browser:resourceDirectory
-      name="{{cookiecutter.package_name}}"
+      name="{{cookiecutter.package_slug}}"
       directory="static"
       />
 
