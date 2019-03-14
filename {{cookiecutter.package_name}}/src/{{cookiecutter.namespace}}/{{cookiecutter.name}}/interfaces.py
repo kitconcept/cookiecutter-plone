@@ -9,5 +9,4 @@ class I{{cookiecutter.project_slug.capitalize()}}CoreLayer(IDefaultBrowserLayer)
 
 
 class IHomepage(model.Schema):
-    """ Homepage content type interface
-    """
+    """Homepage content type interface."""

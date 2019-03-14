@@ -1,5 +1,5 @@
 ====================
-{{cookiecutter.project_slug}}
+{{cookiecutter.package_name}}
 ====================
 
 User documentation

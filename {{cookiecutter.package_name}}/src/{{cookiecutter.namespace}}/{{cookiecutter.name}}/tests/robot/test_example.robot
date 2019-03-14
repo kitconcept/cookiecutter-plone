@@ -4,17 +4,17 @@
 #
 # Run this robot test stand-alone:
 #
-#  $ bin/test -s {{cookiecutter.project_slug}} -t test_example.robot --all
+#  $ bin/test -s {{cookiecutter.package_name}} -t test_example.robot --all
 #
 # Run this robot test with robot server (which is faster):
 #
 # 1) Start robot server:
 #
-# $ bin/robot-server --reload-path src {{cookiecutter.project_slug}}.testing.{{cookiecutter.project_slug.capitalize()}}_CORE_ACCEPTANCE_TESTING
+# $ bin/robot-server --reload-path src {{cookiecutter.package_name}}.testing.{{cookiecutter.project_slug.capitalize()}}_CORE_ACCEPTANCE_TESTING
 #
 # 2) Run robot tests:
 #
-# $ bin/robot src/{{cookiecutter.project_slug}}/core/tests/robot/test_example.robot
+# $ bin/robot src/{{cookiecutter.package_name.replace('.', '/')}}/core/tests/robot/test_example.robot
 #
 # See the http://docs.plone.org for further details (search for robot
 # framework).

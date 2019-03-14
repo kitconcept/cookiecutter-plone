@@ -12,7 +12,7 @@ from {{cookiecutter.package_name}}.interfaces import IHomepage
 import unittest
 
 
-class KontaktIntegrationTest(unittest.TestCase):
+class HomePageIntegrationTest(unittest.TestCase):
 
     layer = {{cookiecutter.project_slug.upper()}}_CORE_INTEGRATION_TESTING
 

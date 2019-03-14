@@ -1,4 +1,4 @@
-graft src/{{cookiecutter.package_name}}
+graft src/{{cookiecutter.package_name.replace('.', '/')}}
 graft docs
 include *.rst
 global-exclude *.pyc
