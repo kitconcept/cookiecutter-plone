@@ -2,6 +2,6 @@
   "package_name": "package.name",
   "namespace": "{{ cookiecutter.package_name.split('.')[0] }}",
   "name": "{{ cookiecutter.package_name.split('.')[1] }}",
-  "project_slug": "{{ cookiecutter.name.lower() }}",
+  "project_slug": "{{ cookiecutter.package_name.lower().replace('.', '') }}",
   "_extensions": ["jinja2_time.TimeExtension"]
 }
