@@ -34,8 +34,7 @@ test-generate: ## Create a sample test package
 .PHONY: test
 test: ## Create a sample package and tests it (runs buildout)
 	@echo "$(GREEN)==> Creating new test package$(RESET)"
-	# rm -rf package.name
-	# ./bin/cookiecutter . --no-input
+	make test-generate
 	(cd package.name && virtualenv -p python2 --clear .)
 	(cd package.name && bin/pip install pip --upgrade)
 	(cd package.name && bin/pip install -r requirements.txt)
