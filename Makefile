@@ -46,3 +46,10 @@ test: ## Create a sample package and tests it (runs buildout)
 create: ## Create a package
 	@echo "$(GREEN)==> Creating new package$(RESET)"
 	./bin/cookiecutter .
+
+.PHONY: Clean
+clean:  ## Clean
+	git clean -Xdf
+
+.PHONY: all clean
+
