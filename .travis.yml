@@ -26,6 +26,7 @@ before_install:
 install:
   - cookiecutter . --no-input
 script:
-  - sed -ie "s#plone-x.x.x.cfg#plone-$PLONE_VERSION.cfg#" package.name/buildout.cfg
-  - (cd package.name && make build)
+  - sed -ie "s#plone-x.x.x.cfg#plone-$PLONE_VERSION.cfg#" package.name/travis.cfg
+  - (cd package.name && make)
+  - (cd package.name && make test-release)
   - (cd package.name && make test)
