@@ -1,4 +1,4 @@
-name: {{cookiecutter.package_name}} CI
+name: kitconcept.workingcopy CI
 on: [push]
 jobs:
   build:
@@ -10,6 +10,7 @@ jobs:
         plone-version: [5.2]
 
     steps:
+
       # git checkout
       - uses: actions/checkout@v2
 
@@ -33,9 +34,28 @@ jobs:
       - name: pip install
         run: pip install -r requirements.txt
 
-      # generate
-      - run: cookiecutter . --no-input
-      - run: (cd projecttitle.projectname && python3 -m venv .)
-      - run: (cd projecttitle.projectname && bin/pip install -r requirements.txt)
-      - run: (cd projecttitle.projectname && bin/buildout)
-      - run: (cd projecttitle.projectname && bin/test)
+      # run pocompile for translation tests
+      - run: pip install zest.pocompile
+      - run: pocompile src
+
+      # choose Plone version
+      - name: choose Plone version
+        run: sed -ie "s#plone-x.x.x.cfg#plone-${{ matrix.plone-version }}.x.cfg#" ci.cfg
+
+      # buildout
+      - name: buildout
+        run: buildout -t 10 -c ci.cfg
+        env:
+          CI: true
+
+      # black
+      - name: black
+        run: if [ "${{ matrix.plone-version }}" == "5.2" ] && [ ${{ matrix.python-version }} == '3.7' ]; then pip install black && black src/ --check; fi
+
+      # code analysis
+      - name: code analysis
+        run: bin/code-analysis
+
+      # test
+      - name: test
+        run: bin/test
