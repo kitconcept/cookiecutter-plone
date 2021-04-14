@@ -5,5 +5,6 @@ include/
 lib/
 pip-selfcheck.json
 *.py?
-
-package.name
+pyvenv.cfg
+.vscode/
+projecttitle.projectname/
