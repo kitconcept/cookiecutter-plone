@@ -1,4 +1,4 @@
-name: {{cookiecutter.package_name}} CI
+name: Cookiecutter Plone CI
 on: [push]
 jobs:
   build:
