@@ -1,12 +1,8 @@
 Changelog
 =========
 
-
-1.0.0a1 (unreleased)
+1.0.0 (2021-04-14)
 ------------------
-
-- Review package and fix some bugs
-  [rodfersou]
 
 - Initial release.
   [kitconcept]
