@@ -38,5 +38,4 @@ jobs:
       - run: (cd projecttitle.projectname && python3 -m venv .)
       - run: (cd projecttitle.projectname && bin/pip install -r requirements.txt)
       - run: (cd projecttitle.projectname && bin/buildout)
-      - run: (cd projecttitle.projectname && bin/code-analysis)
       - run: (cd projecttitle.projectname && bin/test)
