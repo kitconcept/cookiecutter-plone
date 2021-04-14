@@ -10,17 +10,16 @@
    :alt: kitconcept
    :target: https://kitconcept.com/
 
+.. image:: https://secure.travis-ci.org/kitconcept/{{cookiecutter.package_name}}/actions/workflows/ci.yml/badge.svg
+   :target: https://github.com/kitconcept/{{cookiecutter.package_name}}/actions/workflows/ci.yml
 
-.. image:: https://secure.travis-ci.org/collective/{{cookiecutter.package_name}}.png
-    :target: http://travis-ci.org/collective/{{cookiecutter.package_name}}
 
 Development
 -----------
 
 Requirements:
 
-- Python 2.7
-- Virtualenv
+- Python 3.8
 
 Setup::
 
