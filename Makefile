@@ -47,3 +47,19 @@ test: ## Create a sample package and tests it (runs buildout)
 	(cd projecttitle.projectname && bin/pip install -r requirements.txt)
 	(cd projecttitle.projectname && bin/buildout)
 	(cd projecttitle.projectname && bin/test)
+
+ .PHONY: black
+black:  ## Black
+	bin/black src/ setup.py
+
+.PHONY: flake8
+flake8:  ## flake8
+	bin/flake8 src/ setup.py
+
+.PHONY: pyroma
+pyroma:  ## pyroma
+	bin/pyroma -n 10 -d .
+
+.PHONY: zpretty
+zpretty:  ## zpretty
+	find src/ -name *.zcml | xargs zpretty -i
