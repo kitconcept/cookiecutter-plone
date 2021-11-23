@@ -14,6 +14,7 @@ from plone.app.testing import TEST_USER_NAME
 from plone.testing import z2
 
 import {{cookiecutter.package_name}}
+import plone.restapi
 
 
 class {{cookiecutter.project_slug.capitalize()}}CoreLayer(PloneSandboxLayer):
@@ -25,6 +26,7 @@ class {{cookiecutter.project_slug.capitalize()}}CoreLayer(PloneSandboxLayer):
         # The z3c.autoinclude feature is disabled in the Plone fixture base
         # layer.
         self.loadZCML(package={{cookiecutter.package_name}})
+        self.loadZCML(package=plone.restapi)
 
     def setUpPloneSite(self, portal):
         setRoles(portal, TEST_USER_ID, ['Manager'])
