@@ -14,18 +14,18 @@ jobs:
       - uses: actions/checkout@v2
 
       # python setup
-      - name: Set up Python ${{ matrix.python-version }}
+      - name: Set up Python {{ "${{ matrix.python-version }}" }}
         uses: actions/setup-python@v1
         with:
-          python-version: ${{ matrix.python-version }}
+          python-version: {{ "${{ matrix.python-version }}" }}
 
       # python cache
       - uses: actions/cache@v1
         with:
           path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          key: {{ "${{ runner.os }}" }}-pip-{{ "${{ hashFiles('**/requirements.txt') }}" }}
           restore-keys: |
-            ${{ runner.os }}-pip-
+            {{ "${{ runner.os }}" }}-pip-
 
       # python install
       - run: pip install virtualenv
@@ -35,7 +35,7 @@ jobs:
 
       # buildout
       - name: buildout
-        run: buildout -t 10 -c plone-${{ matrix.plone-version }}.x.cfg code-analysis:return-status-codes=True
+        run: buildout -t 10 -c plone-{{ "${{ matrix.plone-version }}" }}.x.cfg code-analysis:return-status-codes=True
         env:
           CI: true
 

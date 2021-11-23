@@ -13,18 +13,18 @@ jobs:
       - uses: actions/checkout@v2
 
       # python setup
-      - name: Set up Python ${{ matrix.python-version }}
+      - name: Set up Python {{ "${{ matrix.python-version }}" }}
         uses: actions/setup-python@v1
         with:
-          python-version: ${{ matrix.python-version }}
+          python-version: {{ "${{ matrix.python-version }}" }}
 
       # python cache
       - uses: actions/cache@v1
         with:
           path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          key: {{ "${{ runner.os }}" }}-pip-{{ "${{ hashFiles('**/requirements.txt') }}" }}
           restore-keys: |
-            ${{ runner.os }}-pip-
+            {{ "${{ runner.os }}" }}-pip-
 
       # install zpretty
       - name: install zpretty
