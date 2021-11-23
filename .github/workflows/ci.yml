@@ -40,3 +40,5 @@ jobs:
       - run: (cd projecttitle.projectname && bin/buildout code-analysis:return-status-codes=True)
       - run: (cd projecttitle.projectname && bin/code-analysis)
       - run: (cd projecttitle.projectname && bin/test)
+      - run: (cd projecttitle.projectname && make black)
+      - run: (cd projecttitle.projectname && make flake8)
