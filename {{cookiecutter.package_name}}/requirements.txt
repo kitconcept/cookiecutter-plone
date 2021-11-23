@@ -2,3 +2,5 @@
 setuptools==42.0.2
 zc.buildout==2.13.3
 wheel
+# code analysis
+black==21.11b1

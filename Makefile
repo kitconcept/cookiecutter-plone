@@ -47,6 +47,7 @@ test: ## Create a sample package and tests it (runs buildout)
 	(cd projecttitle.projectname && bin/pip install -r requirements.txt)
 	(cd projecttitle.projectname && bin/buildout)
 	(cd projecttitle.projectname && bin/test)
+	(cd projecttitle.projectname && make black)
 
  .PHONY: black
 black:  ## Black

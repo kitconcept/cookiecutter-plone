@@ -1,0 +1,14 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="{{cookiecutter.package_name}}">
+
+  <plone:service
+    method="GET"
+    name="@helloworld"
+    factory=".get.HelloWorldGet"
+    for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+    permission="zope2.View"
+    />
+
+</configure>
