@@ -1,9 +1,8 @@
 # -*- coding: utf-8 -*-
 """Setup tests for this package."""
 from {{cookiecutter.package_name}}.testing import {{cookiecutter.project_slug.upper()}}_CORE_INTEGRATION_TESTING  # noqa
-from plone import api
-
 from Products.CMFPlone.utils import get_installer
+
 import unittest
 
 
@@ -16,7 +15,7 @@ class TestSetup(unittest.TestCase):
         """Custom shared utility setup for tests."""
         self.portal = self.layer['portal']
         self.installer = get_installer(self.portal)
-        
+
     def test_product_installed(self):
         """Test if {{cookiecutter.package_name}} is installed."""
         self.assertTrue(
@@ -29,7 +28,7 @@ class TestSetup(unittest.TestCase):
                 "plone.restapi"
             )
         )
-    
+
     def test_browserlayer(self):
         """Test that I{{cookiecutter.project_slug.capitalize()}}CoreLayer is registered."""
         from {{cookiecutter.package_name}}.interfaces import (
