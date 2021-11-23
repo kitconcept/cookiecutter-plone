@@ -42,3 +42,4 @@ jobs:
       - run: (cd projecttitle.projectname && bin/test)
       - run: (cd projecttitle.projectname && make black)
       - run: (cd projecttitle.projectname && make flake8)
+      - run: (cd projecttitle.projectname && make pyroma)

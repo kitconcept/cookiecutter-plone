@@ -49,6 +49,7 @@ test: ## Create a sample package and tests it (runs buildout)
 	(cd projecttitle.projectname && bin/test)
 	(cd projecttitle.projectname && make black)
 	(cd projecttitle.projectname && make flake8)
+	(cd projecttitle.projectname && make pyroma)
 
  .PHONY: black
 black:  ## Black

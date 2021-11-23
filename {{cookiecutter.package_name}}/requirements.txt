@@ -5,3 +5,4 @@ wheel
 # code analysis
 black==21.11b1
 flake8==4.0.1
+pyroma==3.2
